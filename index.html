@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ember &amp; Oak — Wood-fired Café &amp; Bakery</title>
+  <meta name="description" content="Ember & Oak is a wood-fired café and bakery. See the menu, opening hours and book a table online.">
+  <meta property="og:title" content="Ember & Oak — Wood-fired Café & Bakery">
+  <meta property="og:description" content="Slow mornings, wood-fired bread and specialty coffee. Book a table online.">
+  <meta name="theme-color" content="#1c1410">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%23e8743b'/%3E%3Cpath d='M32 14c6 10 12 14 12 24a12 12 0 0 1-24 0c0-6 4-9 6-14 2 5 6 6 6 2 0-4-2-8 0-12z' fill='%231c1410'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="nav" id="top">
+    <div class="container nav__inner">
+      <a href="#top" class="logo" aria-label="Ember & Oak home">
+        <svg viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="32" r="30" fill="currentColor" opacity=".15"/><path d="M32 12c7 11 13 15 13 26a13 13 0 0 1-26 0c0-7 4-10 7-15 2 5 6 6 6 2 0-4-2-9 0-13z" fill="currentColor"/></svg>
+        <span>Ember <em>&amp;</em> Oak</span>
+      </a>
+      <button class="nav__toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Open menu">
+        <span></span><span></span>
+      </button>
+      <nav id="nav-links" class="nav__links" aria-label="Main">
+        <a href="#menu">Menu</a>
+        <a href="#story">Our story</a>
+        <a href="#visit">Visit</a>
+        <a href="#book" class="btn btn--small">Book a table</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero">
+      <div class="hero__glow" aria-hidden="true"></div>
+      <div class="container hero__inner">
+        <p class="eyebrow reveal">Wood-fired café &amp; bakery · since 2019</p>
+        <h1 class="reveal">Slow mornings,<br><span class="accent">fire-kissed</span> bread.</h1>
+        <p class="hero__lead reveal">Sourdough baked at dawn in our oak-burning oven, specialty coffee roasted down the street, and a kitchen that cooks only what's in season.</p>
+        <div class="hero__cta reveal">
+          <a href="#book" class="btn">Book a table</a>
+          <a href="#menu" class="btn btn--ghost">See the menu</a>
+        </div>
+        <ul class="hero__facts reveal" aria-label="Highlights">
+          <li><strong data-count="48">0</strong><span>hour sourdough</span></li>
+          <li><strong data-count="4.9" data-decimals="1">0</strong><span>average rating</span></li>
+          <li><strong data-count="12">0</strong><span>local farms</span></li>
+        </ul>
+      </div>
+      <div class="hero__art" aria-hidden="true">
+        <svg viewBox="0 0 400 400" class="oven">
+          <defs>
+            <clipPath id="mouth"><path d="M110 360V240a90 90 0 0 1 180 0v120z"/></clipPath>
+            <radialGradient id="fire" cx="50%" cy="80%" r="60%">
+              <stop offset="0" stop-color="#ffd27a"/>
+              <stop offset=".45" stop-color="#e8743b"/>
+              <stop offset="1" stop-color="#7a2a12" stop-opacity="0"/>
+            </radialGradient>
+          </defs>
+          <path d="M40 360V200a160 160 0 0 1 320 0v160z" fill="#2a1d16" stroke="#4a3426" stroke-width="6"/>
+          <path d="M110 360V240a90 90 0 0 1 180 0v120z" fill="#120c09"/>
+          <g clip-path="url(#mouth)"><ellipse class="flame" cx="200" cy="330" rx="80" ry="70" fill="url(#fire)"/>
+          <path class="flame flame--2" d="M200 280c18 22 30 32 30 50a30 30 0 0 1-60 0c0-12 8-18 12-28 4 10 12 12 12 4 0-8-2-16 6-26z" fill="#ffb347"/></g>
+          <g fill="#3b2a1f">
+            <rect x="130" y="345" width="140" height="14" rx="7"/>
+            <rect x="150" y="333" width="100" height="12" rx="6" transform="rotate(-8 200 339)"/>
+          </g>
+        </svg>
+      </div>
+    </section>
+
+    <section class="section" id="menu" aria-labelledby="menu-title">
+      <div class="container">
+        <div class="section__head">
+          <p class="eyebrow">The menu</p>
+          <h2 id="menu-title">Made this morning</h2>
+        </div>
+        <div class="tabs" role="tablist" aria-label="Menu categories">
+          <button role="tab" aria-selected="true" aria-controls="panel-breakfast" id="tab-breakfast">Breakfast</button>
+          <button role="tab" aria-selected="false" aria-controls="panel-bakery" id="tab-bakery" tabindex="-1">Bakery</button>
+          <button role="tab" aria-selected="false" aria-controls="panel-coffee" id="tab-coffee" tabindex="-1">Coffee</button>
+        </div>
+
+        <div class="menu" id="panel-breakfast" role="tabpanel" aria-labelledby="tab-breakfast">
+          <article class="dish"><div><h3>Shakshuka in cast iron</h3><p>Slow tomato, roasted peppers, two eggs, labneh, grilled sourdough.</p></div><span class="price">$14</span></article>
+          <article class="dish"><div><h3>Ember toast <span class="tag">V</span></h3><p>Charred sourdough, whipped feta, burnt honey, thyme.</p></div><span class="price">$11</span></article>
+          <article class="dish"><div><h3>Morning plate</h3><p>Soft eggs, smoked labneh, cucumber salad, olives, bread basket.</p></div><span class="price">$16</span></article>
+          <article class="dish"><div><h3>Granola bowl <span class="tag">VG</span></h3><p>House granola, coconut yogurt, poached pear, toasted seeds.</p></div><span class="price">$10</span></article>
+        </div>
+        <div class="menu" id="panel-bakery" role="tabpanel" aria-labelledby="tab-bakery" hidden>
+          <article class="dish"><div><h3>48-hour sourdough loaf</h3><p>Wild yeast, stone-ground flour, oak-fired crust.</p></div><span class="price">$9</span></article>
+          <article class="dish"><div><h3>Cardamom bun</h3><p>Laminated dough, brown butter, cardamom sugar.</p></div><span class="price">$5</span></article>
+          <article class="dish"><div><h3>Burnt basque cheesecake</h3><p>Caramelized top, creamy centre, sea salt.</p></div><span class="price">$7</span></article>
+          <article class="dish"><div><h3>Pistachio croissant</h3><p>Pistachio frangipane, rose sugar.</p></div><span class="price">$6</span></article>
+        </div>
+        <div class="menu" id="panel-coffee" role="tabpanel" aria-labelledby="tab-coffee" hidden>
+          <article class="dish"><div><h3>Espresso</h3><p>Seasonal single origin, roasted locally.</p></div><span class="price">$3</span></article>
+          <article class="dish"><div><h3>Flat white</h3><p>Double ristretto, silky milk or oat.</p></div><span class="price">$4.5</span></article>
+          <article class="dish"><div><h3>Smoked maple latte</h3><p>Our signature: oak-smoked maple syrup.</p></div><span class="price">$5.5</span></article>
+          <article class="dish"><div><h3>Batch brew</h3><p>Free refill while you stay.</p></div><span class="price">$3.5</span></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--warm" id="story" aria-labelledby="story-title">
+      <div class="container split">
+        <div class="reveal">
+          <p class="eyebrow">Our story</p>
+          <h2 id="story-title">One oven, one rule:<br>nothing frozen, ever.</h2>
+          <p>We started with a second-hand bread oven and a stubborn idea that a neighbourhood café can cook like a restaurant. Every morning the fire is lit at 4:30, the first loaves come out at 6, and the menu follows whatever our farmers bring in that week.</p>
+        </div>
+        <ul class="values">
+          <li class="reveal"><span class="values__icon" aria-hidden="true">🔥</span><h3>Real fire</h3><p>Oak and olive wood only. You taste it in the crust.</p></li>
+          <li class="reveal"><span class="values__icon" aria-hidden="true">🌾</span><h3>Local grain</h3><p>Stone-ground flour from two family mills.</p></li>
+          <li class="reveal"><span class="values__icon" aria-hidden="true">☕</span><h3>Fresh roast</h3><p>Beans roasted less than 10 days before brewing.</p></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section" id="book" aria-labelledby="book-title">
+      <div class="container book">
+        <div class="book__intro">
+          <p class="eyebrow">Reservations</p>
+          <h2 id="book-title">Book a table</h2>
+          <p>Walk-ins are always welcome. For groups or weekends, book ahead and we'll keep a spot by the oven.</p>
+          <p class="note">This is a demo form: nothing is sent.</p>
+        </div>
+        <form class="form" id="booking" novalidate>
+          <div class="field">
+            <label for="name">Name</label>
+            <input id="name" name="name" autocomplete="name" required>
+            <span class="error" aria-live="polite"></span>
+          </div>
+          <div class="field">
+            <label for="phone">Phone</label>
+            <input id="phone" name="phone" type="tel" autocomplete="tel" required pattern="[+0-9 ()-]{7,}">
+            <span class="error" aria-live="polite"></span>
+          </div>
+          <div class="field-row">
+            <div class="field">
+              <label for="date">Date</label>
+              <input id="date" name="date" type="date" required>
+              <span class="error" aria-live="polite"></span>
+            </div>
+            <div class="field">
+              <label for="time">Time</label>
+              <select id="time" name="time" required>
+                <option value="">Choose</option>
+                <option>08:00</option><option>09:30</option><option>11:00</option><option>12:30</option><option>14:00</option>
+              </select>
+              <span class="error" aria-live="polite"></span>
+            </div>
+          </div>
+          <fieldset class="field guests">
+            <legend>Guests</legend>
+            <div class="stepper">
+              <button type="button" data-step="-1" aria-label="Fewer guests">−</button>
+              <output id="guests" aria-live="polite">2</output>
+              <button type="button" data-step="1" aria-label="More guests">+</button>
+            </div>
+          </fieldset>
+          <button class="btn btn--full" type="submit">Request booking</button>
+          <p class="form__success" role="status" hidden></p>
+        </form>
+      </div>
+    </section>
+
+    <section class="section section--dark" id="visit" aria-labelledby="visit-title">
+      <div class="container visit">
+        <div>
+          <p class="eyebrow">Visit us</p>
+          <h2 id="visit-title">Find the fire</h2>
+          <address>12 Baker's Lane<br>Old Town</address>
+          <p class="status" id="open-status"></p>
+        </div>
+        <table class="hours" aria-label="Opening hours">
+          <tbody>
+            <tr data-days="0,1,2,3,4"><th scope="row">Sun – Thu</th><td>07:00 – 16:00</td></tr>
+            <tr data-days="5"><th scope="row">Friday</th><td>07:00 – 14:00</td></tr>
+            <tr data-days="6"><th scope="row">Saturday</th><td>Closed</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <p>© <span id="year"></span> Ember &amp; Oak. Demo website.</p>
+      <p>Designed &amp; built by <a href="https://moonwave-studio.com" target="_blank" rel="noopener">MoonWave</a></p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
